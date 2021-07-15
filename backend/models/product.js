@@ -9,7 +9,7 @@ const productSchema = new mongoose.Schema({
     price: {
         type: String,
         required: [true, 'Please enter product price'],
-        maxlength: [5, 'Product name cannot exceed 5 characters'],
+        maxlength: [15, 'Product name cannot exceed 15 characters'],
         default: 0.0
     },
     description: {
@@ -39,9 +39,9 @@ const productSchema = new mongoose.Schema({
             values: [
                 'Electronics',
                 'Cameras',
-                'Laptop',
+                'Laptops',
                 'Accessories',
-                'Headphone',
+                'Headphones',
                 'Food',
                 'Books',
                 'Clothes/Shoes',
@@ -60,7 +60,7 @@ const productSchema = new mongoose.Schema({
     stock: {
         type: Number,
         required: [true, 'Please enter product stock'],
-        maxlength: [5, 'Product name cannot exceed 5 characters'],
+        maxlength: [15, 'Product name cannot exceed 15 characters'],
         default: 0
     },
     numOfReviews: {
