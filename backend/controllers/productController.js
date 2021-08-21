@@ -44,7 +44,7 @@ exports.getSingleProduct = catchAsyncErrors (async (req, res, next) => {
     })
 })
 
-exports.UpdateProduct = catchAsyncErrors (async (req, res, next) => {
+exports.updateProduct = catchAsyncErrors (async (req, res, next) => {
     let product = await Product.findById(req.params.id)
 
     if (!product) {
@@ -63,7 +63,7 @@ exports.UpdateProduct = catchAsyncErrors (async (req, res, next) => {
     })
 })
 
-exports.DeleteProduct = catchAsyncErrors (async (req,res, next) => {
+exports.deleteProduct = catchAsyncErrors (async (req,res, next) => {
     const product = await Product.findById(req.params.id)
 
     if (!product) {
